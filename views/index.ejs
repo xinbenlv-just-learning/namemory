@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+    <style type="text/css">
+    body {
+      margin: 0px;
+      padding: 0px;
+    }
+    #coming_soon{
+      text-align: center;
+    }
+    #coming_soon_row{
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="navbar-inner">
+          <a class="brand" href="#">NAMEMORY</a>
+          <ul class="nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="http://namemory.blogspot.com/">Official Blog</a></li>
+          </ul>
+        </div>
+      </div>  
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="span4"></div>
+        <div class="span4">
+          <img src="/images/demo2.png" alt="">
+        </div>
+        <div class="span4"></div>
+      </div>
+      <div class="row" id="coming_soon_row">
+        <div class="span4"></div>
+        <div id="coming_soon" class="span4 btn btn-primary" href="#myModal" role="button" class="btn btn-primary" data-toggle="modal">Coming soon... Sign up for Beta</div>
+        <div class="span4"></div>
+      </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">Sign up for Beta!</h3>
+      </div>
+      <div class="modal-body">
+        <form>
+        <fieldset>
+          <label>Put your email address here and we will send you invitation for Beta testing.</label>
+          <input type="text" placeholder="john@example.com">
+          <label class="checkbox">
+            <input type="checkbox"> I would like to receive news about Namemory. 
+          </label>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </fieldset>
+      </form>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+      </div>
+    </div>
+    </div>
+
+
+  </body>
+</html>
