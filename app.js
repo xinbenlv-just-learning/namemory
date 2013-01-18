@@ -28,10 +28,13 @@ app.configure(function(){
 
 app.configure('development', function(){
   app.use(express.errorHandler());
-});
 
+});
+app.use(express.bodyParser());
 app.get('/', routes.index);
 app.get('/thankyou', routes.thankyou);
+app.get('/submit', routes.submit);
+
 
 app.get('/users', user.list);
 

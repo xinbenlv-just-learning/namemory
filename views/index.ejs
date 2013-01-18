@@ -53,12 +53,12 @@
         <h3 id="myModalLabel">Sign up for Beta!</h3>
       </div>
       <div class="modal-body">
-        <form onSubmit="window.open ('/thankyou')" >
+        <form id="contactForm1" action="/submit" method="get">
         <fieldset>
           <label>Put your email address here and we will send you invitation for Beta testing.</label>
-          <input type="text" placeholder="john@example.com">
+          <input type="text" name="text_email" placeholder="john@example.com">
           <label class="checkbox">
-            <input type="checkbox"> I would like to receive news about Namemory. 
+            <input name="checkbox_subscribe_news" type="checkbox"> I would like to receive news about Namemory. 
           </label>
           <button type="submit" class="btn btn-primary">Submit</button>
         </fieldset>
@@ -70,7 +70,5 @@
       </div>
     </div>
     </div>
-
-
   </body>
 </html>
