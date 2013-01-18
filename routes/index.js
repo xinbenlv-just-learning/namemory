@@ -14,7 +14,6 @@ exports.thankyou = function(req, res){
 };
 exports.submit = function(req, res){
     console.log("--------------------------");
-    console.log(req);
     console.log("submitted email:"+req.query["text_email"]);
     console.log("submitted checkbox:" + req.query["checkbox_subscribe_news"]);    
     var mongo = require('mongodb');
