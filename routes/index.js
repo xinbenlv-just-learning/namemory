@@ -21,8 +21,10 @@ exports.submit = function(req, res){
     var mongoUri = process.env.MONGOLAB_URI || 
       process.env.MONGOHQ_URL || 
       'mongodb://localhost/mydb'; 
+    console.log("DBG: mongoUri="+mongoUri);
 
     mongo.Db.connect(mongoUri, function (err, db) {
+      console.log("DBG: err=" + err);  
       db.collection('mydocs', function(er, collection) {
         collection.insert({
                 'time': String(new Date().getTime()),
