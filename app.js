@@ -33,6 +33,13 @@ app.configure('development', function(){
 app.use(express.bodyParser());
 app.get('/', routes.index);
 app.get('/thankyou', routes.thankyou);
+app.get('/convertboth', routes.convertboth);
+app.get('/convert1', routes.convert1);
+app.get('/convert2', routes.convert2);
+
+
+
+
 app.get('/submit', routes.submit);
 
 

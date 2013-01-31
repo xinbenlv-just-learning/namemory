@@ -12,6 +12,17 @@ exports.index = function(req, res){
 exports.thankyou = function(req, res){
   res.render('thankyou', { title: "Namemory" });
 };
+exports.convertboth = function(req, res){
+  res.render('convertboth', { title: "Namemory" });
+};
+exports.convert1 = function(req, res){
+  res.render('convert1', { title: "Namemory" });
+};
+
+exports.convert2 = function(req, res){
+  res.render('convert2', { title: "Namemory" });
+};
+
 exports.submit = function(req, res){
     console.log("--------------------------");
     console.log("submitted email:"+req.query["text_email"]);
