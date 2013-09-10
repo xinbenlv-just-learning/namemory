@@ -28,7 +28,7 @@ exports.convertxhtml = function(req, res){
 };
 
 exports.convertchtml = function(req, res){
-  res.render('convertxhtml');
+  res.render('convertchtml');
 };
 
 exports.convertwml = function(req, res){
