@@ -37,6 +37,13 @@ app.get('/convertboth', routes.convertboth);
 app.get('/convert1', routes.convert1);
 app.get('/convert2', routes.convert2);
 
+app.get('/convertxhtml', routes.convertxhtml);
+app.get('/convertchtml', routes.convertchtml);
+app.get('/convertwml', routes.convertwml);
+
+
+
+
 
 
 

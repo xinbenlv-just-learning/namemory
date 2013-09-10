@@ -23,6 +23,20 @@ exports.convert2 = function(req, res){
   res.render('convert2', { title: "Namemory" });
 };
 
+exports.convertxhtml = function(req, res){
+  res.render('convertxhtml');
+};
+
+exports.convertchtml = function(req, res){
+  res.render('convertxhtml');
+};
+
+exports.convertwml = function(req, res){
+  res.render('convertwml');
+};
+
+
+
 exports.submit = function(req, res){
     console.log("--------------------------");
     console.log("submitted email:"+req.query["text_email"]);
