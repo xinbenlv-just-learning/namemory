@@ -8,7 +8,8 @@ var express = require('express')
   , user = require('./routes/user')
   , http = require('http')
   , path = require('path');
-
+var fs = require('fs');
+var mime = require('mime');
 var app = express();
 
 app.configure(function(){
@@ -37,11 +38,52 @@ app.get('/convertboth', routes.convertboth);
 app.get('/convert1', routes.convert1);
 app.get('/convert2', routes.convert2);
 
-app.get('/convertxhtml', routes.convertxhtml);
-app.get('/convertchtml', routes.convertchtml);
-app.get('/convertwml', routes.convertwml);
 
 
+app.get('/convert.wml', function(req, res) {
+  thePath = 'static/convert.wml'
+  fs.readFile(thePath, function read(err, data) {
+      if (err) {
+          throw err;
+      }
+      body = data;
+      mimeType = mime.lookup(thePath);
+      res.setHeader('Content-Type', mimeType);
+      res.setHeader('Content-Length', body.length);
+      res.end(body);
+      console.log('response: ' + mimeType + '\n' + body  + '===========================\n');
+    });
+});
+
+app.get('/convert.xhtml', function(req, res) {
+  thePath = 'static/convert.xhtml'
+  fs.readFile(thePath, function read(err, data) {
+      if (err) {
+          throw err;
+      }
+      body = data;
+      mimeType = mime.lookup(thePath);
+      res.setHeader('Content-Type', mimeType);
+      res.setHeader('Content-Length', body.length);
+      res.end(body);
+      console.log('response: ' + mimeType + '\n' + body  + '===========================\n');
+    });
+});
+
+app.get('/convert.chtml', function(req, res) {
+  thePath = 'static/convert.htm'
+  fs.readFile(thePath, function read(err, data) {
+      if (err) {
+          throw err;
+      }
+      body = data;
+      mimeType = mime.lookup(thePath);
+      res.setHeader('Content-Type', mimeType);
+      res.setHeader('Content-Length', body.length);
+      res.end(body);
+      console.log('response: ' + mimeType + '\n' + body  + '===========================\n');
+    });
+});
 
 
 
