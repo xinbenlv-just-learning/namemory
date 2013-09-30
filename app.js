@@ -85,6 +85,21 @@ app.get('/convert.chtml', function(req, res) {
     });
 });
 
+app.get('/convert.html', function(req, res) {
+  thePath = 'static/convert.html'
+  fs.readFile(thePath, function read(err, data) {
+      if (err) {
+          throw err;
+      }
+      body = data;
+      mimeType = mime.lookup(thePath);
+      res.setHeader('Content-Type', mimeType);
+      res.setHeader('Content-Length', body.length);
+      res.end(body);
+      console.log('response: ' + mimeType + '\n' + body  + '===========================\n');
+    });
+});
+
 
 
 app.get('/oldconvert.wml', function(req, res) {
