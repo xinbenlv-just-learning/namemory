@@ -87,6 +87,54 @@ app.get('/convert.chtml', function(req, res) {
 
 
 
+app.get('/oldconvert.wml', function(req, res) {
+  thePath = 'static/oldconvert.wml'
+  fs.readFile(thePath, function read(err, data) {
+      if (err) {
+          throw err;
+      }
+      body = data;
+      mimeType = mime.lookup(thePath);
+      res.setHeader('Content-Type', mimeType);
+      res.setHeader('Content-Length', body.length);
+      res.end(body);
+      console.log('response: ' + mimeType + '\n' + body  + '===========================\n');
+    });
+});
+
+app.get('/oldconvert.xhtml', function(req, res) {
+  thePath = 'static/oldconvert.xhtml'
+  fs.readFile(thePath, function read(err, data) {
+      if (err) {
+          throw err;
+      }
+      body = data;
+      mimeType = mime.lookup(thePath);
+      res.setHeader('Content-Type', mimeType);
+      res.setHeader('Content-Length', body.length);
+      res.end(body);
+      console.log('response: ' + mimeType + '\n' + body  + '===========================\n');
+    });
+});
+
+app.get('/oldconvert.chtml', function(req, res) {
+  thePath = 'static/oldconvert.htm'
+  fs.readFile(thePath, function read(err, data) {
+      if (err) {
+          throw err;
+      }
+      body = data;
+      mimeType = mime.lookup(thePath);
+      res.setHeader('Content-Type', mimeType);
+      res.setHeader('Content-Length', body.length);
+      res.end(body);
+      console.log('response: ' + mimeType + '\n' + body  + '===========================\n');
+    });
+});
+
+
+
+
 
 
 app.get('/submit', routes.submit);
