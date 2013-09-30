@@ -4,5 +4,7 @@
 <wml>
   <card id="main" title="First Card">
     <p mode="wrap">This is a sample WML page.</p>
+<!-- Google Code for b-WML-nohttp Conversion Page -->
+<p align="center">Google Site Stats<a href="//www.google.com/gwt/n?u=//services.google.com/sitestats/en.html">send feedback</a><img height="1" width="1" alt="" src="//www.googleadservices.com/pagead/conversion/991950745/imp.gif?value=0&amp;label=UTsRCJeLvggQme__2AM&amp;guid=ON&amp;script=0"/></p>
   </card>
 </wml>
