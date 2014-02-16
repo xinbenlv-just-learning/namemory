@@ -23,6 +23,15 @@ exports.convert2 = function(req, res){
   res.render('convert2', { title: "Namemory" });
 };
 
+exports.convertbcoff = function(req, res){
+  res.render('convertbcoff', { title: "Namemory" });
+};
+
+exports.convertbcon = function(req, res){
+  res.render('convertbcon', { title: "Namemory" });
+};
+
+
 exports.convertxhtml = function(req, res){
   res.render('convertxhtml');
 };

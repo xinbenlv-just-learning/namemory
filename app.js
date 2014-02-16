@@ -37,6 +37,9 @@ app.get('/thankyou', routes.thankyou);
 app.get('/convertboth', routes.convertboth);
 app.get('/convert1', routes.convert1);
 app.get('/convert2', routes.convert2);
+app.get('/convertbcoff', routes.convertbcoff);
+app.get('/convertbcon', routes.convertbcon);
+
 
 
 
